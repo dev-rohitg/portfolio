@@ -14,7 +14,7 @@ Short, actionable guidance so an AI coding agent can be productive immediately i
 - `assets/css/style.css` — site styles and responsive layout tweaks.
 - `assets/js/main.js` — DOM helpers + all client interactivity (scroll, typed text, isotope, sliders).
 - `assets/vendor/` — third-party libraries included in the template (AOS, Bootstrap, GLightbox, Swiper, Isotope, Typed.js, etc.).
-- `forms/contact.php` — optional PHP endpoint used by the contact form; expects `assets/vendor/php-email-form/php-email-form.php` (pro-only library).
+-- Contact form: removed. `forms/contact.php` now returns a 410 placeholder and the `assets/vendor/php-email-form/` directory has been deleted. If you want the old PHP endpoint restored, re-add the pro `php-email-form` library and restore `forms/contact.php`.
 
 ## Common patterns an agent should follow
 - DOM helpers: `assets/js/main.js` uses `select()` and `on()` helpers — follow those selectors/classes when adding behavior.
@@ -38,7 +38,7 @@ Short, actionable guidance so an AI coding agent can be productive immediately i
 Debugging: use the browser DevTools console. JS is not minified; changes to `assets/js/main.js` will reload on page refresh.
 
 ## Integration notes / gotchas
-- Contact form: the template refers to a pro-only `php-email-form` library. `forms/contact.php` will die if `assets/vendor/php-email-form/php-email-form.php` is missing — treat the contact form as optional or add SMTP credentials if using SMTP.
+-- Contact form: the template originally referenced a pro-only `php-email-form` library. The library and validator directory have been removed in this repo; restore them if you intend to re-enable the form.
 - External CDNs: Google Fonts and Font Awesome are loaded from CDN in `index.html`; offline edits may require adding fallback fonts/icons.
 - Do not modify files under `assets/vendor/` unless updating a library deliberately — these are third-party assets.
 
